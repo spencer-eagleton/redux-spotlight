@@ -18,7 +18,7 @@ const Counter = () => {
             dispatch(darkMode());
           }}
         >
-          darkmode
+          darkmode!
         </button>
       </div>
       <div>

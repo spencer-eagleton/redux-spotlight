@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   count: 0,
+  darkmode: false,
 };
 
 export const counterSlice = createSlice({
@@ -17,10 +18,17 @@ export const counterSlice = createSlice({
     decrement: (state) => {
       state.count -= 1;
     },
+    multiply: (state) => {
+      state.count *= 2;
+    },
+    darkMode: (state) => {
+      state.darkmode = !state.darkmode;
+    },
   },
 });
 
-export const { increment, decrement } = counterSlice.actions;
+export const { increment, decrement, multiply, darkMode } =
+  counterSlice.actions;
 
 //Export the reducer function from the slice
 export default counterSlice.reducer;
